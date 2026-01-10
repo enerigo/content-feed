@@ -1,23 +1,23 @@
 {
   "version": 3,
-  "updatedAt": "2026-01-10T08:20:00Z",
+  "updatedAt": "2025-01-03T08:00:00Z",
   "items": [
     {
-      "id": "service-update-001",
+      "id": "bus-route-change-varshanidze-2025",
       "priority": "normal",
-      "startAt": "2026-01-10T00:00:00Z",
+      "startAt": "2025-01-03T00:00:00Z",
       "endAt": null,
       "title": {
-        "ru": "Обновление сервиса",
-        "en": "Service update",
-        "ka": "სერვისის განახლება",
-        "tr": "Servis güncellemesi"
+        "ru": "Временное изменение движения автобусов",
+        "en": "Temporary bus route changes",
+        "ka": "ავტობუსების მოძრაობის დროებითი ცვლილება",
+        "tr": "Otobüs güzergâhlarında geçici değişiklik"
       },
       "body": {
-        "ru": "Здесь будут важные обновления сервиса.",
-        "en": "Important service updates will appear here.",
-        "ka": "აქ გამოჩნდება სერვისის მნიშვნელოვანი განახლებები.",
-        "tr": "Burada önemli servis güncellemeleri yayınlanacak."
+        "ru": "В связи с проведением дорожно-реабилитационных работ с 3 января временно ограничивается движение транспорта на улице Мамии Варшанидзе на участке от улицы Луки Асатиани до улицы Сулаберидзе.\n\nВ этой связи муниципальные автобусы №7 и №7а будут курсировать по альтернативным маршрутам:\n\n№7: ул. Сулаберидзе → ул. Багратиони → ул. Асатиани → ул. Варшанидзе\n\n№7а: ул. Варшанидзе → ул. Асатиани → ул. Багратиони → ул. Сулаберидзе\n\nПросим учитывать данные изменения при планировании поездок.",
+        "en": "Due to road rehabilitation works, starting from January 3, traffic will be temporarily restricted on Mamia Varshanidze Street, on the section from Luka Asatiani Street to Sulaberidze Street.\n\nAs a result, municipal bus routes No. 7 and No. 7a will operate on alternative routes:\n\nNo. 7: Sulaberidze St → Bagrationi St → Asatiani St → Varshanidze St\n\nNo. 7a: Varshanidze St → Asatiani St → Bagrationi St → Sulaberidze St\n\nPlease take these changes into account when planning your trips.",
+        "ka": "საგზაო-სარეაბილიტაციო სამუშაოების გამო, 3 იანვრიდან დროებით შეიზღუდება სატრანსპორტო მოძრაობა მამია ვარშანიძის ქუჩაზე, ლუკა ასათიანის ქუჩიდან სულაბერიძის ქუჩამდე მონაკვეთში.\n\nაღნიშნულთან დაკავშირებით მუნიციპალური ავტობუსები №7 და №7ა იმოძრავებენ ალტერნატიული მარშრუტებით:\n\n№7: სულაბერიძის ქ. → ბაგრატიონის ქ. → ასათიანის ქ. → ვარშანიძის ქ.\n\n№7ა: ვარშანიძის ქ. → ასათიანის ქ. → ბაგრატიონის ქ. → სულაბერიძის ქ.\n\nგთხოვთ, მგზავრობის დაგეგმვისას გაითვალისწინოთ აღნიშნული ცვლილებები.",
+        "tr": "Yol rehabilitasyon çalışmaları nedeniyle 3 Ocak’tan itibaren Mamia Varshanidze Caddesi’nde, Luka Asatiani Caddesi ile Sulaberidze Caddesi arasındaki bölümde trafik geçici olarak kısıtlanacaktır.\n\nBu kapsamda, belediyeye ait 7 ve 7A numaralı otobüsler alternatif güzergâhlardan hizmet verecektir:\n\n7 No’lu hat: Sulaberidze Cd → Bagrationi Cd → Asatiani Cd → Varshanidze Cd\n\n7A No’lu hat: Varshanidze Cd → Asatiani Cd → Bagrationi Cd → Sulaberidze Cd\n\nLütfen seyahatlerinizi planlarken bu değişiklikleri dikkate alınız."
       }
     }
   ]
