@@ -1,23 +1,24 @@
 {
-  "updatedAt": "2026-01-10T08:00:00Z",
+  "version": 3,
+  "updatedAt": "2026-01-10T08:20:00Z",
   "items": [
     {
-      "id": "2026-01-10-1",
-      "date": "2026-01-10",
+      "id": "service-update-001",
       "priority": "normal",
+      "startAt": "2026-01-10T00:00:00Z",
+      "endAt": null,
       "title": {
         "ru": "Обновление сервиса",
         "en": "Service update",
-        "tr": "Hizmet güncellemesi",
-        "ka": "სერვისის განახლება"
+        "ka": "სერვისის განახლება",
+        "tr": "Servis güncellemesi"
       },
       "body": {
         "ru": "Здесь будут важные обновления сервиса.",
         "en": "Important service updates will appear here.",
-        "tr": "Önemli hizmet güncellemeleri burada görünecek.",
-        "ka": "აქ გამოჩნდება სერვისის მნიშვნელოვანი განახლებები."
-      },
-      "link": null
+        "ka": "აქ გამოჩნდება სერვისის მნიშვნელოვანი განახლებები.",
+        "tr": "Burada önemli servis güncellemeleri yayınlanacak."
+      }
     }
   ]
 }
