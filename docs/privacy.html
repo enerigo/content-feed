@@ -1,0 +1,420 @@
+<!-- privacy.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <title>BatBus — Privacy Policy</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#101b33;
+      --text:#e7ecff;
+      --muted:#b9c3ff;
+      --line:rgba(255,255,255,.12);
+      --brand:#7aa2ff;
+      --ok:#57d39f;
+      --warn:#ffd08a;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius: 18px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f5f7ff;
+        --card:#ffffff;
+        --text:#0c1020;
+        --muted:#41527a;
+        --line:rgba(12,16,32,.12);
+        --brand:#2f6bff;
+        --shadow: 0 10px 30px rgba(12,16,32,.12);
+      }
+    }
+    body{
+      margin:0;
+      font-family: var(--sans);
+      background: radial-gradient(900px 500px at 10% -10%, rgba(122,162,255,.28), transparent 60%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(87,211,159,.18), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a{ color: var(--brand); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 28px 18px 60px;
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      flex-wrap:wrap;
+      margin-bottom: 18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:44px;height:44px;border-radius:14px;
+      background: linear-gradient(135deg, rgba(122,162,255,1), rgba(87,211,159,1));
+      box-shadow: var(--shadow);
+    }
+    h1{
+      font-size: 28px;
+      margin: 0;
+      letter-spacing: .2px;
+    }
+    .subtitle{
+      margin: 3px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .pillbar{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:flex-end;
+    }
+    .pill{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: var(--muted);
+      backdrop-filter: blur(6px);
+    }
+    .pill strong{ color: var(--text); font-weight: 650; }
+    .card{
+      background: rgba(255,255,255,.06);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card-inner{ padding: 22px 22px; }
+    .toc{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .toc a{
+      display:block;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .toc a:hover{
+      background: rgba(122,162,255,.12);
+      text-decoration:none;
+    }
+    h2{
+      margin: 22px 0 10px;
+      font-size: 18px;
+      letter-spacing: .2px;
+    }
+    p{ margin: 10px 0; color: var(--text); }
+    .muted{ color: var(--muted); }
+    .list{
+      margin: 10px 0 0;
+      padding: 0;
+      list-style: none;
+      display:grid;
+      gap: 10px;
+    }
+    .li{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding: 12px 14px;
+      border-radius: 14px;
+    }
+    .tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .dot{
+      width:9px;height:9px;border-radius:999px;display:inline-block;
+      background: var(--brand);
+      box-shadow: 0 0 0 4px rgba(122,162,255,.18);
+    }
+    .dot.ok{ background: var(--ok); box-shadow: 0 0 0 4px rgba(87,211,159,.18); }
+    .dot.warn{ background: var(--warn); box-shadow: 0 0 0 4px rgba(255,208,138,.20); }
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .box{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      padding: 14px;
+      border-radius: 16px;
+    }
+    .box h3{
+      margin:0 0 6px;
+      font-size: 15px;
+      letter-spacing: .2px;
+    }
+    .box p{ margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+    .code{
+      font-family: var(--mono);
+      font-size: 12.5px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px dashed var(--line);
+      background: rgba(0,0,0,.16);
+      overflow:auto;
+      color: var(--text);
+      margin-top: 10px;
+    }
+    footer{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align:center;
+    }
+    .hr{
+      height:1px;
+      background: var(--line);
+      margin: 18px 0;
+    }
+    .small{ font-size: 13px; color: var(--muted); }
+    .toplink{ float:right; font-size: 12px; color: var(--muted); }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>BatBus — Privacy Policy</h1>
+          <div class="subtitle">Last updated: <strong>January 2026</strong></div>
+        </div>
+      </div>
+
+      <div class="pillbar">
+        <div class="pill"><strong>Region:</strong> Georgia + EU-friendly</div>
+        <div class="pill"><strong>No accounts</strong> required</div>
+        <div class="pill"><strong>HTTPS</strong> public page</div>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="card-inner">
+        <p class="muted">
+          BatBus (“the app”, “we”, “our”) respects your privacy. This policy explains what data may be collected
+          when you use BatBus and why it is used. BatBus is published in Google Play and may be used in Georgia
+          and other countries, including the European Economic Area (EEA).
+        </p>
+
+        <div class="toc" aria-label="Table of contents">
+          <a href="#what">What data we collect</a>
+          <a href="#why">How we use data</a>
+          <a href="#ads">Advertising (AdMob)</a>
+          <a href="#firebase">Firebase services</a>
+          <a href="#vip">VIP / Rewards</a>
+          <a href="#news">News content</a>
+          <a href="#eea">EEA / GDPR notice</a>
+          <a href="#choices">Your choices & controls</a>
+          <a href="#children">Children</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:14px;">
+      <div class="card-inner">
+        <h2 id="what">What data we collect <a class="toplink" href="#top">↑</a></h2>
+        <p>
+          BatBus does <strong>not</strong> ask you to create an account and we do <strong>not</strong> collect
+          information such as your name, email, or phone number.
+        </p>
+
+        <ul class="list">
+          <li class="li">
+            <div class="tag"><span class="dot ok"></span><strong>App usage & diagnostics</strong></div>
+            <div class="small">
+              Basic events like app screens visited, interactions, and crash reports may be collected through Firebase services.
+            </div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot"></span><strong>Anonymous identifiers</strong></div>
+            <div class="small">
+              The app may use an anonymous identifier (e.g., Firebase installation/app instance identifier) to support
+              features like news read status and VIP entitlements.
+            </div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot warn"></span><strong>Advertising identifiers (if ads are enabled)</strong></div>
+            <div class="small">
+              Google AdMob may use device advertising identifiers and related signals to serve ads, including rewarded ads.
+              See Google’s policy for details.
+            </div>
+          </li>
+        </ul>
+
+        <div class="hr"></div>
+        <h2 id="why">How we use data</h2>
+        <div class="grid">
+          <div class="box">
+            <h3>App improvement</h3>
+            <p>Monitor stability, investigate crashes, and improve performance.</p>
+          </div>
+          <div class="box">
+            <h3>Remote configuration</h3>
+            <p>Enable/disable features (ads, VIP rewards, routes, news) without forcing app updates.</p>
+          </div>
+          <div class="box">
+            <h3>Advertising & rewards</h3>
+            <p>Show ads and rewarded ads and grant VIP time when applicable.</p>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+        <h2 id="ads">Advertising (Google AdMob)</h2>
+        <p>
+          BatBus may display ads using Google AdMob, including <strong>rewarded ads</strong>.
+          AdMob may collect and process data such as advertising identifiers and device information to serve and measure ads.
+        </p>
+        <p class="muted">
+          You can control ad personalization in your Android settings (see <a href="#choices">Your choices</a>).
+        </p>
+
+        <div class="hr"></div>
+        <h2 id="firebase">Firebase services</h2>
+        <p>BatBus may use the following Google Firebase products:</p>
+        <ul class="list">
+          <li class="li">
+            <div class="tag"><span class="dot"></span><strong>Firebase Analytics</strong></div>
+            <div class="small">Helps us understand general app usage (aggregated).</div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot"></span><strong>Firebase Crashlytics</strong></div>
+            <div class="small">Helps us detect crashes and fix issues faster.</div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot"></span><strong>Firebase Remote Config</strong></div>
+            <div class="small">Controls feature flags and app parameters (ads/news/routes/VIP settings).</div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot"></span><strong>Firebase Firestore</strong></div>
+            <div class="small">May store news content and anonymous entitlement data (VIP/no-ads expiration).</div>
+          </li>
+        </ul>
+
+        <p class="muted">
+          Google’s privacy policy:
+          <a href="https://policies.google.com/privacy" rel="noopener noreferrer">https://policies.google.com/privacy</a>
+        </p>
+
+        <div class="hr"></div>
+        <h2 id="vip">VIP / Rewards</h2>
+        <p>
+          BatBus can grant temporary VIP features (for example, after a rewarded ad or via promo/coupon logic if enabled).
+          VIP status is represented by an expiration timestamp stored locally on your device and/or in Firebase Firestore
+          using an anonymous identifier.
+        </p>
+        <div class="code" aria-label="VIP data stored example">
+VIP data may include:
+- vipUntil (timestamp)
+- noAdsUntil (timestamp)
+- readNewsIds (list of IDs)
+(No name/email/phone is stored.)
+        </div>
+
+        <div class="hr"></div>
+        <h2 id="news">News content</h2>
+        <p>
+          BatBus may display in-app news published by the app owner. News entries may be stored in Firebase Firestore and
+          loaded by the app. Your device may store which news items you have read to show an “unread” indicator.
+        </p>
+
+        <div class="hr"></div>
+        <h2 id="eea">EEA / GDPR notice (for EU/EEA users)</h2>
+        <p>
+          If you are located in the European Economic Area (EEA) or the UK, we process data under the following legal bases:
+        </p>
+        <ul class="list">
+          <li class="li">
+            <div class="tag"><span class="dot ok"></span><strong>Legitimate interests</strong></div>
+            <div class="small">App stability, security, debugging, and basic analytics to improve the service.</div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot warn"></span><strong>Consent (where required)</strong></div>
+            <div class="small">
+              For personalized ads, consent may be requested via Google’s consent mechanism (e.g., UMP) depending on region and settings.
+            </div>
+          </li>
+        </ul>
+        <p class="muted">
+          Note: If you enable/serve ads in the EEA, it’s recommended to implement Google UMP consent flow before initializing ads.
+        </p>
+
+        <div class="hr"></div>
+        <h2 id="choices">Your choices & controls</h2>
+        <ul class="list">
+          <li class="li">
+            <div class="tag"><span class="dot"></span><strong>Reset app data</strong></div>
+            <div class="small">You can clear the app’s data from Android settings or reinstall the app.</div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot warn"></span><strong>Ad personalization</strong></div>
+            <div class="small">
+              Android Settings → Google → Ads (or Privacy) lets you control ad personalization and advertising identifier usage.
+            </div>
+          </li>
+          <li class="li">
+            <div class="tag"><span class="dot ok"></span><strong>Opt-out choices</strong></div>
+            <div class="small">
+              Some features may reduce or disable ads (e.g., VIP/no-ads time) depending on remote configuration.
+            </div>
+          </li>
+        </ul>
+
+        <div class="hr"></div>
+        <h2 id="children">Children</h2>
+        <p>
+          BatBus is not intended for children under 13. If you are a parent/guardian and believe a child has used the app
+          in a way that concerns you, please contact us.
+        </p>
+
+        <div class="hr"></div>
+        <h2 id="contact">Contact</h2>
+        <p>
+          If you have questions about this Privacy Policy, contact:
+        </p>
+        <div class="code">
+Email: batbus.app@gmail.com
+        </div>
+
+        <p class="small">
+          This page is provided for transparency and compliance with Google Play / Firebase / AdMob requirements.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © BatBus • Privacy Policy • Hosted via GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>
